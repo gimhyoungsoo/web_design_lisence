@@ -1,0 +1,82 @@
+@charset "utf-8"; * { margin: 0; padding: 0; list-style: none; text-decoration: none; color: black; box-sizing: border-box; } 
+
+#container_window { width: 100vw; height: 100vh; } 
+
+#container_ACB { width: 100%; height: calc(100% - 120px); display: flex; } 
+
+/* ---------- modal ---------- */
+#modal { width: 50vw; height: 60vh; border: 1px solid black; position: fixed; left: 25vw; top: 20vh; visibility: hidden; } 
+
+#modal header { width: 100%; height: 10%; font-size: 24px; } 
+
+#modal p { width: 100%; height: 80%; text-decoration: underline; } 
+
+#modal button { position: absolute; bottom: 10px; right: 10px; } 
+
+
+
+/* ==================== A ==================== */
+#A { min-width: 180px; width: 200px; height: 100%; background-color: chartreuse; } 
+
+#A .logo { width: 100%; height: 50px; text-align: center; line-height: 50px; margin-bottom: 20px; } 
+
+nav { width: 80%; background-color: whitesmoke; margin: auto; } 
+
+nav .main_menu > a { display: block; font-size: larger; font-weight: 600; padding: 2px 0; } 
+
+nav .sub_menu li { height: 0; overflow: hidden; transition: height 0.5s; font-size: 20px; } 
+
+nav .main_menu:hover > a { background-color: tomato; } 
+
+nav .main_menu:hover .sub_menu li { height: 30px; } 
+
+nav .sub_menu li:hover { background-color: tomato; } 
+
+/* ==================== C ==================== */
+#C { width: 400px; height: 100%; background-color: blanchedalmond; display: flex; flex-direction: column; } 
+
+/* ---------- banner part ---------- */
+.banner { width: 100%; height: 100px; border-bottom: 1px dotted grey; } 
+
+.banner h3 { display: inline-block; position: relative; top: 50%; left: 50%; transform: translate(-50%, -50%); } 
+
+/* ---------- notice part ---------- */
+.notice { overflow: hidden; flex-grow: 2; } 
+
+.notice h3 { padding-left: 20px; } 
+
+.notice ul { width: 90%; margin: 0 auto; } 
+
+.notice li { display: flex; line-height: 2.2; } 
+
+.notice li:hover { text-decoration: underline; } 
+
+.notice li a { display: inline-block; text-overflow: ellipsis; white-space: nowrap; overflow: hidden; width: 250px; } 
+
+.notice li span { margin-left: auto; } 
+
+/* ---------- gallery part ---------- */
+.gallery { display: flex; flex-direction: column; } 
+
+.gallery h3 { padding-left: 20px; } 
+
+.gallery ul { margin-top: 1%; display: flex; justify-content: space-evenly; } 
+
+.gallery ul li span { margin-top: 1%; display: block; text-align: center; } 
+
+/* ---------- shortcut part ---------- */
+.shortcut { width: 100%; height: 100px; background-color: coral; } 
+
+/* ==================== B ==================== */
+#B { width: calc(100% - 200px - 400px); height: 100%; background-color: cornflowerblue; } 
+
+/* .slide { } */
+
+/* ==================== FOOTER ==================== */
+footer { width: 100%; height: 120px; background-color: aqua; } 
+
+footer .logo { background-color: coral; min-width: 200px; width: 200px; height: 100%; height: 100%; text-align: center; filter: grayscale(0.7); } 
+
+footer .container ul { display: flex; height: 40%; align-items: center; padding-left: 10px; } 
+
+footer .container ul li { margin: 0 10px; } 
