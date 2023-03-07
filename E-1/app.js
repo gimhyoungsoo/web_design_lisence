@@ -1,4 +1,9 @@
-window.onload = ()=>{
+window.onload = () => {
+    ModalInit()
+    SlideInit()
+}
+
+function ModalInit() {
     const modal = document.querySelector("#modal")
     const modal_closeBtn = document.querySelector("#modal button")
 
@@ -14,3 +19,25 @@ window.onload = ()=>{
     })
 }
 
+function SlideInit() {
+    const slide = document.querySelector("#B .slide_container")
+    
+    slide.append(slide.firstElementChild.cloneNode(true))
+    let i = 0;
+    let timerId = setInterval(() => {
+        
+        if ((i < 4)) {
+            slide.style.transition = `transform 0.5s`
+            slide.style.transform = `translateX( calc( ${-i * 100}vw + ${i * 600}px ))`
+            i++;
+           
+        }
+        else {
+            
+            slide.style.transition = `transform 0s`
+            slide.style.transform = `translateX(0)`
+        }
+        
+        
+    },2000)
+}

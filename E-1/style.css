@@ -1,21 +1,25 @@
 @charset "utf-8"; * { margin: 0; padding: 0; list-style: none; text-decoration: none; color: black; box-sizing: border-box; } 
 
+a {text-decoration: none; color: inherit;}
+
+/*global end --------- */
+
+/* container --------- */
 #container_window { width: 100vw; height: 100vh; } 
 
 #container_ACB { width: 100%; height: calc(100% - 120px); display: flex; } 
 
-/* ---------- modal ---------- */
-#modal { width: 50vw; height: 60vh; border: 1px solid black; position: fixed; left: 25vw; top: 20vh; visibility: hidden; } 
+/*modal start---------- */
+#modal { width: 50vw; height: 60vh; border: 1px solid black; position: fixed; left: 25vw; top: 20vh; visibility: hidden; background-color: aliceblue; } 
 
 #modal header { width: 100%; height: 10%; font-size: 24px; } 
 
-#modal p { width: 100%; height: 80%; text-decoration: underline; } 
+#modal p {margin: 0 auto; width: 80%; height: 80%; text-decoration: underline; } 
 
 #modal button { position: absolute; bottom: 10px; right: 10px; } 
+/*modal end---------- */
 
-
-
-/* ==================== A ==================== */
+/*A ==================== */
 #A { min-width: 180px; width: 200px; height: 100%; background-color: chartreuse; } 
 
 #A .logo { width: 100%; height: 50px; text-align: center; line-height: 50px; margin-bottom: 20px; } 
@@ -32,16 +36,16 @@ nav .main_menu:hover .sub_menu li { height: 30px; }
 
 nav .sub_menu li:hover { background-color: tomato; } 
 
-/* ==================== C ==================== */
+/*C ==================== */
 #C { width: 400px; height: 100%; background-color: blanchedalmond; display: flex; flex-direction: column; } 
 
-/* ---------- banner part ---------- */
-.banner { width: 100%; height: 100px; border-bottom: 1px dotted grey; } 
+/*banner part ---------- */
+.banner { flex-grow: 1; width: 100%; height: 100px; border-bottom: 1px dotted grey; } 
 
 .banner h3 { display: inline-block; position: relative; top: 50%; left: 50%; transform: translate(-50%, -50%); } 
 
-/* ---------- notice part ---------- */
-.notice { overflow: hidden; flex-grow: 2; } 
+/*notice part ---------- */
+.notice { flex-grow: 1.5; overflow: hidden;  background-color: crimson; } 
 
 .notice h3 { padding-left: 20px; } 
 
@@ -55,8 +59,8 @@ nav .sub_menu li:hover { background-color: tomato; }
 
 .notice li span { margin-left: auto; } 
 
-/* ---------- gallery part ---------- */
-.gallery { display: flex; flex-direction: column; } 
+/*gallery part ---------- */
+.gallery { flex-grow: 1.5; background-color: rebeccapurple; } 
 
 .gallery h3 { padding-left: 20px; } 
 
@@ -64,19 +68,23 @@ nav .sub_menu li:hover { background-color: tomato; }
 
 .gallery ul li span { margin-top: 1%; display: block; text-align: center; } 
 
-/* ---------- shortcut part ---------- */
-.shortcut { width: 100%; height: 100px; background-color: coral; } 
+/*shortcut part ---------- */
+.shortcut {  flex-grow: 1; display: flex; justify-content: space-around; width: 100%; height: 100px; background-color: coral; } 
 
-/* ==================== B ==================== */
-#B { width: calc(100% - 200px - 400px); height: 100%; background-color: cornflowerblue; } 
+/*B ==================== */
+#B {  min-width: 600px;  width: calc(100% - 200px - 400px); height: 100%; background-color: cornflowerblue; } 
 
-/* .slide { } */
+.slide_container { transition: transform 0.5s; display: flex; width: 400%; height: 100%;}
+.slide_container div { position: relative; }
+.slide_container span { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); background-color: white;}
+.slide_container img { width: 100%; height: 100%; object-fit: cover;}
 
-/* ==================== FOOTER ==================== */
-footer { width: 100%; height: 120px; background-color: aqua; } 
+/*FOOTER ==================== */
+footer { display: flex; width: 100%; height: 120px; } 
 
 footer .logo { background-color: coral; min-width: 200px; width: 200px; height: 100%; height: 100%; text-align: center; filter: grayscale(0.7); } 
 
-footer .container ul { display: flex; height: 40%; align-items: center; padding-left: 10px; } 
+footer .container ul { padding-left: 10px; display: flex; height: 40%; align-items: center; } 
 
 footer .container ul li { margin: 0 10px; } 
+footer .footer_p_wrapper { padding-left: 20px; border-top: 1px dotted gray;}
