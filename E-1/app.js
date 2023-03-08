@@ -21,7 +21,6 @@ function ModalInit() {
 
 function SlideInit() {
     const slide = document.querySelector("#B .slide_container")
-    
     slide.append(slide.firstElementChild.cloneNode(true))
     let i = 0;
     let timerId = setInterval(() => {
@@ -33,11 +32,11 @@ function SlideInit() {
            
         }
         else {
-            
             slide.style.transition = `transform 0s`
             slide.style.transform = `translateX(0)`
+            i = 0
         }
         
         
-    },2000)
+    },1500)
 }
