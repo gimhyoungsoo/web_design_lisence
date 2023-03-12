@@ -20,23 +20,23 @@ function ModalInit() {
 }
 
 function SlideInit() {
-    const slide = document.querySelector("#B .slide_container")
-    slide.append(slide.firstElementChild.cloneNode(true))
-    let i = 0;
-    let timerId = setInterval(() => {
-        
-        if ((i < 4)) {
-            slide.style.transition = `transform 0.5s`
-            slide.style.transform = `translateX( calc( ${-i * 100}vw + ${i * 600}px ))`
-            i++;
-           
+    const slide_wrap = document.querySelector("#B .slide_container")
+
+
+
+        const animate = {
+            marginLeft: "-100%",
         }
-        else {
-            slide.style.transition = `transform 0s`
-            slide.style.transform = `translateX(0)`
-            i = 0
+        const animateOptions = {
+            duration: 500,
+            // fill: "both",
+            
         }
-        
-        
-    },1500)
+    const intervalId = setInterval(() => {
+        slide_wrap.animate(animate, animateOptions).finished.then(()=>{
+            slide_wrap.appendChild(slide_wrap.firstElementChild)
+        })
+
+    }, 3000);
+
 }
