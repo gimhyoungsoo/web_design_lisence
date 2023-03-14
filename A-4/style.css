@@ -17,6 +17,9 @@ a {
     text-decoration: none;
     color: inherit;
 }
+
+
+
 #container_wrapper {
     margin: 0 auto;
     position: relative;
@@ -44,11 +47,13 @@ header {
 }
 
 header .menu_bg {
+    z-index: 999;
+    transition: height .5s;
     position: absolute;
     top: 100px;
-    width: inherit;
-    height: 120px;
-    background-color: var(--sub-color);
+    width: 100%;
+    height: 0px;
+    background-color: var(--sub-color)
 
 }
 
@@ -58,7 +63,7 @@ header h1 {
     font-size: 0;
 }
 
-/* nav---------------------------------------- */
+/* nav-------------------------------------------------- */
 nav {
     display: flex;
     position: relative;
@@ -68,8 +73,9 @@ nav {
 nav ul{
     list-style: none;
 }
-
+/* gnb------------------------------ */
 nav .gnb {
+    z-index: 1000;
     display: flex;
     justify-content:end;
     position: absolute;
@@ -93,10 +99,18 @@ nav .gnb a {
 }
 
 nav .gnb .sub_menu {
+    transition: height 0.5s;
+    height: 0;
+    overflow: hidden;
     background-color: var(--sub-color)
 }
 
-nav .gnb .main_menu:hover > a{
+/* hover------------------------------ */
+nav .gnb:hover .sub_menu {
+    height: 120px;
+}
+
+nav .gnb .main_menu:hover{
     background-color: var(--main-color)
 }
 
@@ -104,19 +118,81 @@ nav .gnb .sub_menu li:hover {
     background-color: whitesmoke;
 }
 
-/* B---------------------------------------- */
+/* B-------------------------------------------------- */
 #B {
     width:inherit;
     height: 300px;
     background-color: cadetblue;
 }
 
+#B .slide_container div{
+    position: absolute;
+}
+
+#B .slide_container div span {
+    position: absolute;
+    font-size: 32px;
+    background-color: white;
+}
+
 #C {
+    display: flex;
     width:inherit;
     height: 200px;
+    background-color: pink
+    ;
+}
+
+#C .notice {
+    flex-grow: 1;  
+
+} 
+
+#C .gallery {
+    flex-grow: 1;
+}
+#C .shortcut {
+    /* flex-grow: 1;     */
+    position: relative;
+    background-color: aquamarine;
+}
+#C .shortcut span {
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%
+    );
 }
 
 footer {
+    display: flex;
     width:inherit;
     height: 100px;
+    background-color: palegreen;
+}
+footer >div{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: inherit;
+    background-color: #9bd7d7;
+}
+
+footer .menu {
+    width: 100%;
+    height: 50%;
+    background-color: palevioletred;
+}
+
+footer .copyright{
+    width: 100%;
+    height: 50%;
+    background-color: teal;
+}
+
+footer .family_site {
+    width:300px;
+    height:inherit;
+    background-color: aliceblue;
 }
